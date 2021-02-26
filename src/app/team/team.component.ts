@@ -23,6 +23,10 @@ export class TeamComponent implements OnInit, OnDestroy {
           this.players = this.teamForm.get('players') as FormArray
         })
   }
+  
+  getPlayerFormAt(i: number): FormGroup {
+    return this.players.at(i) as FormGroup;
+  }
 
   ngOnDestroy() {
     this.teamFormSub.unsubscribe()
