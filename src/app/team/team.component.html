@@ -5,7 +5,7 @@
   <button mat-button-raised color="primary"(click)="addPlayer()">Add Player</button>
   <ul>
     <li *ngFor="let player of players?.controls; let i = index">
-      <nba-player [index]="i" [playerForm]="player" (deletePlayer)="deletePlayer($event)"></nba-player>
+      <nba-player [index]="i" [playerForm]="getPlayerFormAt(i)" (deletePlayer)="deletePlayer($event)"></nba-player>
     </li>
   </ul>
 
